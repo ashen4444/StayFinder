@@ -2,6 +2,7 @@ package com.stayfinder.backend.controller.hotel;
 
 import com.stayfinder.backend.dto.hotel.HotelCreateRequest;
 import com.stayfinder.backend.dto.hotel.HotelResponse;
+import com.stayfinder.backend.dto.hotel.HotelUpdateRequest;
 import com.stayfinder.backend.model.hotel.Hotel;
 import com.stayfinder.backend.service.hotel.HotelService;
 import org.springframework.web.bind.annotation.*;
@@ -32,5 +33,21 @@ public class HotelController {
     public HotelResponse getHotelById(@PathVariable String id) {
         return hotelService.getHotelById(id);
     }
+
+    @PutMapping("/{id}")
+    public HotelResponse updateHotel(
+            @PathVariable String id,
+            @RequestBody HotelUpdateRequest request
+    ) {
+        return hotelService.updateHotel(id, request);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteHotel(@PathVariable String id) {
+        hotelService.deleteHotel(id);
+    }
+
+
+
 
 }
