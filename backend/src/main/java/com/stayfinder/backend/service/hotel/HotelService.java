@@ -1,14 +1,20 @@
 package com.stayfinder.backend.service.hotel;
 
-import com.stayfinder.backend.model.hotel.Hotel;
+import com.stayfinder.backend.dto.hotel.HotelCreateRequest;
+import com.stayfinder.backend.dto.hotel.HotelUpdateRequest;
+import com.stayfinder.backend.dto.hotel.HotelResponse;
 
 import java.util.List;
 
 public interface HotelService {
 
-    Hotel createHotel(Hotel hotel);
+    HotelResponse createHotel(HotelCreateRequest request);
 
-    List<Hotel> getAllHotels();
+    HotelResponse getHotelById(String id);
 
-    Hotel getHotelById(String id);
+    List<HotelResponse> getAllHotels();
+
+    HotelResponse updateHotel(String id, HotelUpdateRequest request);
+
+    void deleteHotel(String id);
 }

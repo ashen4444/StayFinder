@@ -1,5 +1,6 @@
 package com.stayfinder.backend.dto.hotel;
 
+import com.stayfinder.backend.model.hotel.*;
 import lombok.Data;
 import java.util.List;
 
@@ -8,16 +9,14 @@ public class HotelResponse {
 
     private String id;
 
-    private String name;
-    private String address;
-    private String description;
-
-    private List<String> languagesSpoken;
-
-    private Object facilities;
-    private Object rooms;
-    private Object roomPackages;
-    private Object policies;
-    private Object metadata;
+    private BasicInfo basicInfo;
+    private ImageSet images;
+    private List<Room> rooms;
+    private Facilities facilities;
+    private SwimmingPool swimmingPool;
+    private List<Review> reviews;
+    private ReviewInsights reviewInsights;
+    private Metadata metadata;
 }
+
 

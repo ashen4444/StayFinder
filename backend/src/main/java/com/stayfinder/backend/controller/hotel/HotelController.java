@@ -1,5 +1,7 @@
 package com.stayfinder.backend.controller.hotel;
 
+import com.stayfinder.backend.dto.hotel.HotelCreateRequest;
+import com.stayfinder.backend.dto.hotel.HotelResponse;
 import com.stayfinder.backend.model.hotel.Hotel;
 import com.stayfinder.backend.service.hotel.HotelService;
 import org.springframework.web.bind.annotation.*;
@@ -17,17 +19,18 @@ public class HotelController {
     }
 
     @PostMapping
-    public Hotel createHotel(@RequestBody Hotel hotel) {
-        return hotelService.createHotel(hotel);
+    public HotelResponse createHotel(@RequestBody HotelCreateRequest request) {
+        return hotelService.createHotel(request);
     }
 
     @GetMapping
-    public List<Hotel> getAllHotels() {
+    public List<HotelResponse> getAllHotels() {
         return hotelService.getAllHotels();
     }
 
     @GetMapping("/{id}")
-    public Hotel getHotelById(@PathVariable String id) {
+    public HotelResponse getHotelById(@PathVariable String id) {
         return hotelService.getHotelById(id);
     }
+
 }
