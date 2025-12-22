@@ -11,18 +11,29 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class Review {
 
-    // Review source
-    private String source;          // e.g. "Google", "Booking.com", "Manual"
+    /**
+     * Internal identifier for the review
+     */
+    private String reviewId;
 
-    // Reviewer info
-    private String authorName;
-    private boolean verified;       // verified by external platform
+    /**
+     * Source of the review (Google Reviews, Booking.com, etc.)
+     */
+    private String source;
 
-    // Review content
-    private double rating;          // e.g. 4.5
+    /**
+     * Rating value (e.g., 4.5)
+     */
+    private double rating;
+
+    /**
+     * Raw review text collected manually
+     */
     private String reviewText;
-    private String language;
 
-    // Metadata
+    /**
+     * Date when the review was posted
+     */
     private LocalDate reviewDate;
 }
+

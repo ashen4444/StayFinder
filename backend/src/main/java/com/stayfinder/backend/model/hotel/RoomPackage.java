@@ -11,24 +11,45 @@ import java.util.List;
 @AllArgsConstructor
 public class RoomPackage {
 
-    // Package identity
-    private String packageName;          // e.g. "Deluxe Double Room with Breakfast"
-    private String packageCode;          // optional internal reference
+    /**
+     * Unique identifier for this package
+     */
+    private String packageId;
 
-    // Guest & bed details
-    private int maxGuests;
-    private String bedType;              // e.g. "1 Queen Bed", "2 Single Beds"
+    /**
+     * Display title shown to users
+     * Example: Deluxe Double Room with Breakfast
+     */
+    private String title;
 
-    // Meal & pricing
-    private String mealPlan;             // e.g. "Room only", "Breakfast included"
-    private double pricePerNight;
-    private String currency;             // e.g. "USD", "LKR"
+    /**
+     * Number of guests covered by this package
+     */
+    private int guests;
 
-    // Cancellation & refund
+    /**
+     * Pricing details
+     */
+    private Price price;
+
+    /**
+     * Meal plan information
+     */
+    private MealPlan mealPlan;
+
+    /**
+     * Whether free cancellation is allowed
+     */
     private boolean refundable;
-    private CancellationPolicy cancellationPolicy;
 
-    // Extra notes for AI reasoning
-    private List<String> highlights;     // e.g. "Sea view", "Best for couples"
-    private List<String> additionalNotes;
+    /**
+     * Extra benefits included in this package
+     */
+    private List<String> extraBenefits;
+
+    /**
+     * Additional notes or tags
+     */
+    private String customNotes;
 }
+

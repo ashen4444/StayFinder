@@ -11,23 +11,29 @@ import java.util.List;
 @AllArgsConstructor
 public class SwimmingPool {
 
-    // Pool availability
-    private int outdoorPoolCount;
-    private int indoorPoolCount;
-    private int kidsPoolCount;
+    /**
+     * Outdoor pools information
+     */
+    private Pool outdoor;
 
-    // Access rules
-    private boolean freeAccess;
-    private String agePolicy; // e.g. "All ages welcome", "Adults only"
+    /**
+     * Indoor pools information
+     */
+    private Pool indoor;
 
-    // Pool features
-    private boolean poolWithView;
-    private boolean infinityPool;
-    private boolean shallowEnd;
-    private boolean poolBar;
-    private boolean sunLoungers;
-    private boolean sunUmbrellas;
+    /**
+     * Kids pool information
+     */
+    private Pool kids;
 
-    // Additional notes or custom services
-    private List<String> customPoolFeatures;
+    /**
+     * Common features across pools
+     */
+    private List<String> commonFeatures;
+
+    /**
+     * Age restrictions or notes
+     */
+    private String agePolicy;
 }
+

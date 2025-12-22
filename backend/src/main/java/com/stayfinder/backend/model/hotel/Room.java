@@ -11,36 +11,38 @@ import java.util.List;
 @AllArgsConstructor
 public class Room {
 
-    // Basic room details
-    private String roomName;              // e.g. "Deluxe Double Room"
-    private String roomType;              // e.g. "Deluxe", "Standard"
-    private double roomSize;              // in square meters
-    private String description;
+    /**
+     * Internal unique identifier for the room type
+     */
+    private String roomId;
 
-    // Room-level structured facilities (checkbox-friendly)
-    private boolean airConditioning;
-    private boolean fan;
-    private boolean hotWater;
-    private boolean flatScreenTv;
-    private boolean satelliteTv;
-    private boolean socketNearBed;
-    private boolean mosquitoNet;
-    private boolean dryingRackForClothing;
-    private boolean refrigerator;
-    private boolean minibar;
-    private boolean teaCoffeeMaker;
-    private boolean soundproofRoom;
-    private boolean privateBathroom;
+    /**
+     * Display name (e.g., Deluxe Double Room)
+     */
+    private String roomName;
 
-    // Views
-    private List<String> views;            // e.g. "Sea view", "Garden view"
+    /**
+     * Maximum number of guests allowed
+     */
+    private int maxGuests;
 
-    // Room packages
-    private List<RoomPackage> roomPackages;
+    /**
+     * Bed configuration description
+     */
+    private String bedType;
 
-    // Images
-    private List<String> imageUrls;
+    /**
+     * Images related to this room
+     */
+    private ImageSet images;
 
-    // Custom room features (rare / unique)
-    private List<String> customRoomFeatures;
+    /**
+     * Facilities available in this room
+     */
+    private RoomFacilities roomFacilities;
+
+    /**
+     * Different purchasable variants of this room
+     */
+    private List<RoomPackage> packages;
 }

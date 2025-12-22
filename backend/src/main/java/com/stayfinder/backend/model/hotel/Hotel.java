@@ -14,18 +14,41 @@ import java.util.List;
 @Document(collection = "hotels")
 public class Hotel {
 
+    // ===================== EXISTING CORE =====================
+
     @Id
     private String id;
 
-    private String name;
+    // ===================== BASIC INFO =====================
 
-    private String address;
+    private BasicInfo basicInfo;
 
-    private String description;
+    // ===================== IMAGES (LOCKED STRUCTURE) =====================
 
-    private List<String> languagesSpoken;
+    private ImageSet images;
 
-    private double rating;
+    // ===================== ROOMS =====================
 
-    private int reviewCount;
+    private List<Room> rooms;
+
+    // ===================== FACILITIES & SERVICES =====================
+
+    private Facilities facilities;
+
+    // ===================== SWIMMING POOLS =====================
+
+    private SwimmingPool swimmingPool;
+
+    // ===================== REVIEWS =====================
+
+    // Raw reviews (manual / collected)
+    private List<Review> reviews;
+
+    // AI-generated review summary
+    private ReviewInsights reviewInsights;
+
+    // ===================== METADATA =====================
+
+    private Metadata metadata;
 }
+

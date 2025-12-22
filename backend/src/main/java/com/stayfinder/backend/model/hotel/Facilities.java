@@ -11,33 +11,49 @@ import java.util.List;
 @AllArgsConstructor
 public class Facilities {
 
-    // General facilities
-    private boolean freeWifi;
-    private boolean parking;
-    private boolean restaurant;
-    private boolean bar;
-    private boolean gym;
-    private boolean spa;
-    private boolean wheelchairAccessible;
-    private boolean elevator;
-    private boolean smokingArea;
+    // ===================== ROOM SERVICES =====================
+    private List<String> roomServices;
 
-    // Room-related facilities
-    private boolean airConditioning;
-    private boolean hotWater;
-    private boolean flatScreenTv;
-    private boolean refrigerator;
-    private boolean minibar;
-    private boolean teaCoffeeMaker;
-    private boolean soundproofRooms;
+    // ===================== FOOD & DRINK =====================
+    private List<String> foodAndDrink;
 
-    // Safety & security
-    private boolean cctv;
-    private boolean fireExtinguishers;
-    private boolean smokeAlarms;
-    private boolean security24Hours;
-    private boolean safetyDepositBox;
+    // ===================== BATHROOM =====================
+    private List<String> bathroom;
 
-    // Custom user-defined facilities
-    private List<String> customFacilities;
+    // ===================== INTERNET =====================
+    private List<String> internetFacilities;
+
+    // ===================== SAFETY & SECURITY =====================
+    private List<String> safetyAndSecurity;
+
+    // ===================== BUSINESS CENTRE =====================
+    private List<String> businessFacilities;
+
+    // ===================== CLEANING SERVICES =====================
+    private List<String> cleaningServices;
+
+    // ===================== OUTDOORS =====================
+    private List<String> outdoors;
+
+    // ===================== ENTERTAINMENT =====================
+    private List<String> entertainment;
+
+    // ===================== OUTDOOR ACTIVITIES =====================
+    private List<String> outdoorActivities;
+
+    // ===================== GENERAL =====================
+    private List<String> generalFacilities;
+
+    // ===================== FRONT DESK =====================
+    private List<String> frontDeskServices;
+
+    // ===================== SPA & WELLNESS =====================
+    private List<String> spaAndWellness;
+
+    // ===================== CUSTOM / OTHER =====================
+    /**
+     * Any facilities that do not fit the above categories
+     */
+    private List<String> custom;
 }
+
