@@ -16,4 +16,3 @@ public class HotelCreateRequest {
     private Metadata metadata;
 }
 
-
