@@ -16,5 +16,3 @@ public class HotelUpdateRequest {
     private ReviewInsights reviewInsights;
     private Metadata metadata;
 }
-
-
